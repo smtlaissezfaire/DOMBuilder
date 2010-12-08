@@ -1,6 +1,10 @@
 describe("css builder", function() {
+  before(function() {
+    builder = require("css_builder");
+  });
+
   it("should be able to build a css property", function() {
-    var property = CSSBuilder.node({
+    var property = builder.node({
       height: "10px"
     });
 
@@ -8,7 +12,7 @@ describe("css builder", function() {
   });
 
   it("should build any property given", function() {
-    var property = CSSBuilder.node({
+    var property = builder.node({
       width: "20px"
     });
 
@@ -16,7 +20,7 @@ describe("css builder", function() {
   });
 
   it("should be able to output multiple properties", function() {
-    var properties = CSSBuilder.node({
+    var properties = builder.node({
       height: "10px",
       width: "20px"
     });

@@ -1,4 +1,8 @@
 describe("dom builder", function() {
+  before(function() {
+    DOMBuilder = require("dom_builder");
+  });
+
   it("should be able to create a tag", function() {
     DOMBuilder.node("div").should.equal("<div></div>");
   });
