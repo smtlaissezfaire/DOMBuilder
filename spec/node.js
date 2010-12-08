@@ -8,7 +8,10 @@ require('jspec');
 require('unit/spec.helper');
 require("./vendor/jspec_dot_reporter/jspec_dot_reporter");
 
+require("dom_builder");
+
 JSpec
   .exec('spec/unit/spec.js')
+  .exec('spec/unit/dom_builder_spec.js')
   .run({ reporter: JSpecDotReporter, fixturePath: 'spec/fixtures', failuresOnly: true })
   .report();
